@@ -8,6 +8,7 @@
     <title>Momentum App</title>
 </head>
 <body>
+    <h2 id="clock">00:00:00</h2>
     <form class="login-form hidden">
         <input
             class="login-input"
@@ -17,9 +18,15 @@
         />
         <button class="login-btn">로그인</button>
     </form>
-
-    <h2 id="clock">00:00:00</h2>
     <h1 class="hidden greeting"></h1>
+    <form class="logout-form hidden">
+        <button class="logout-btn">로그아웃</button>
+    </form>
+
+    <form id="todo-form">
+        <input required type="text" placeholder="오늘 할 일을 적어보세요!">
+    </form>
+    <ul id="todo-list"></ul>
     <div id="quote">
         <span></span>
         <span></span>
@@ -29,5 +36,6 @@
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
 </body>
 </html>
