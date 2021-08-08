@@ -18,6 +18,7 @@ function deleteToDo(event) {
 }
 
 function paintToDo(newToDo) {
+    
     const li = document.createElement("li");
     li.id=newToDo.id;
     const span = document.createElement("span");
@@ -66,6 +67,7 @@ function paintSavedToDos() {
         parsedToDos.forEach(paintToDo);
     }
 }
+
 
 function init() {
     toDoForm.addEventListener("submit", handleToDoSubmit);

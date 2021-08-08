@@ -14,13 +14,15 @@ function onLoginSubmit(event) {
     const username = loginInput.value;
     localStorage.setItem(USERNAME_KEY, username);
     paintGreetings(username);
+    toDoForm.querySelector("input").classList.remove(HIDDEN_CLASSNAME);
 }
 
 function onLogoutSubmit() {
     savedUserInfo();
     logoutForm.classList.add(HIDDEN_CLASSNAME);
+    toDoForm.querySelector("input").classList.add(HIDDEN_CLASSNAME);
     localStorage.removeItem(USERNAME_KEY);
-    localStorage.removeItem("todos");
+    localStorage.removeItem(TODOS_KEY);
 }
 
 function savedUserInfo() {
