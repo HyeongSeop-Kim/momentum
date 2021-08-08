@@ -1,3 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family=Nanum+Brush+Script:400");
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding:400,700");
+@import "reset.css";
+@import "variable.css";
+
+#clock {
+  display: flex;
+  justify-content: center;
+  font-size: 150px;
+  font-weight: 700;
+  margin: 150px 0px 100px 0px;
+}
+
+.login-form,
+.logout-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.login-input {
+  padding: 20px 100px;
+}
+
+.login-input,
+.greeting {
+  font-size: 60px;
+  color: var(--white);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.greeting {
+  display: flex;
+  justify-content: center;
+}
+
+.login-btn,
+.logout-btn {
+  padding: 10px 20px;
+  font-size: 35px;
+  color: var(--white);
+}
+
+#todo-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+#todo-form input {
+  font-size: 50px;
+  color: var(--white);
+  padding: 10px 150px;
+}
+
+#todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+#todo-list li {
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+#quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  font-family: "Nanum Brush Script";
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+#quote span {
+  margin-top: 30px;
+}
+
+body {
+  font-family: "Nanum Gothic Coding", "Open Sans", sans-serif;
+  color: var(--white);
+}
+
 .hidden {
   display: none;
 }
