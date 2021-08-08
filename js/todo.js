@@ -18,7 +18,6 @@ function deleteToDo(event) {
 }
 
 function paintToDo(newToDo) {
-    
     const li = document.createElement("li");
     li.id=newToDo.id;
     const span = document.createElement("span");
@@ -47,7 +46,6 @@ function handleToDoSubmit(event) {
 function loadedUserInfo() {
     for (let i=0; i<userInfo.length; i++) {
         if (document.querySelector(".login-input").value === userInfo[i].username) {
-            console.log(JSON.parse(userInfo[i].todos));
             localStorage.setItem(TODOS_KEY,userInfo[i].todos);
             userInfo = userInfo.filter((userInfo) => userInfo.username !== document.querySelector(".login-input").value);
             localStorage.setItem("userInfo", JSON.stringify(userInfo));
@@ -68,9 +66,15 @@ function paintSavedToDos() {
     }
 }
 
+function checkedUsername() {
+    if (localStorage.getItem(USERNAME_KEY) !== null) {
+        toDoForm.querySelector("input").classList.remove(HIDDEN_CLASSNAME);
+    }    
+}
 
 function init() {
     toDoForm.addEventListener("submit", handleToDoSubmit);
+    checkedUsername();
     paintSavedToDos();
     loginForm.addEventListener("submit", loadedUserInfo);
 }
